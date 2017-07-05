@@ -24,7 +24,7 @@ def get_latest(file_name):
     for sub_list in games_list:
         years.append(sub_list[2])
     maxyears = max(years)
-    return (games_list[years.index(maxyears)])
+    return(games_list[years.index(maxyears)][0])
 
 def count_by_genre(file_name, genre):
     games_list = file_read(file_name)
@@ -43,7 +43,6 @@ def get_line_number_by_title(file_name, title):
         if title == game_list[i][0]:
             return i+1
     raise ValueError
-            
 
 #file_read("game_stat.txt")
 #count_games("game_stat.txt")
